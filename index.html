@@ -67,9 +67,7 @@
     cursor: pointer;
   }
 
-  .nav-links a:hover, .nav-links a.active {
-    color: var(--ink);
-  }
+  .nav-links a:hover, .nav-links a.active { color: var(--ink); }
 
   .page { display: none; }
   .page.active { display: block; }
@@ -79,6 +77,19 @@
     max-width: 720px;
     margin: 0 auto;
     padding: 5rem 2.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  /* Headshot Styling */
+  .headshot {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border);
   }
 
   .home-tagline {
@@ -91,10 +102,7 @@
     margin-bottom: 1.5rem;
   }
 
-  .home-tagline em {
-    font-style: italic;
-    color: var(--accent);
-  }
+  .home-tagline em { font-style: italic; color: var(--accent); }
 
   .home-intro {
     font-size: 16px;
@@ -104,11 +112,7 @@
     line-height: 1.75;
   }
 
-  .home-links {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
+  .home-links { display: flex; gap: 1rem; flex-wrap: wrap; }
 
   .btn {
     display: inline-flex;
@@ -125,20 +129,9 @@
     border: 1px solid transparent;
   }
 
-  .btn-primary {
-    background: var(--accent);
-    color: white;
-    border-color: var(--accent);
-  }
-
+  .btn-primary { background: var(--accent); color: white; border-color: var(--accent); }
   .btn-primary:hover { background: #2e4a3e; }
-
-  .btn-outline {
-    background: transparent;
-    color: var(--ink-mid);
-    border-color: var(--border);
-  }
-
+  .btn-outline { background: transparent; color: var(--ink-mid); border-color: var(--border); }
   .btn-outline:hover { background: var(--accent-light); color: var(--accent); border-color: var(--accent); }
 
   .home-stats {
@@ -160,78 +153,19 @@
     margin-bottom: 6px;
   }
 
-  .stat-value {
-    font-family: var(--serif);
-    font-size: 18px;
-    color: var(--ink);
-    line-height: 1.4;
-  }
+  .stat-value { font-family: var(--serif); font-size: 18px; color: var(--ink); line-height: 1.4; }
 
-  .section-wrap {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 3rem 2.5rem 5rem;
-  }
+  .section-wrap { max-width: 720px; margin: 0 auto; padding: 3rem 2.5rem 5rem; }
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+  .section-title { font-family: var(--serif); font-size: 2rem; font-weight: 400; color: var(--ink); margin-bottom: 2rem; line-height: 1.3; }
 
-  .section-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.25rem;
-  }
-
-  .section-title {
-    font-family: var(--serif);
-    font-size: 2rem;
-    font-weight: 400;
-    color: var(--ink);
-    margin-bottom: 2rem;
-    line-height: 1.3;
-  }
-
-  /* ABOUT */
-  .about-body {
-    font-size: 16px;
-    color: var(--ink-mid);
-    line-height: 1.8;
-  }
-
+  .about-body { font-size: 16px; color: var(--ink-mid); line-height: 1.8; }
   .about-body p + p { margin-top: 1.25rem; }
+  .about-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 
-  .about-body a {
-    color: var(--accent);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
+  /* Re-formatted Text List for Languages */
+  .text-list { font-size: 14px; color: var(--ink-mid); line-height: 1.6; }
 
-  .lang-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 2.5rem;
-  }
-
-  .lang-card {
-    background: var(--accent-light);
-    border-radius: 8px;
-    padding: 1rem 1.25rem;
-  }
-
-  .lang-name {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--accent);
-    margin-bottom: 2px;
-  }
-
-  .lang-level {
-    font-size: 12px;
-    color: var(--ink-light);
-  }
-
-  /* PROJECTS */
   .project-card {
     border: 0.5px solid var(--border);
     border-radius: 10px;
@@ -240,131 +174,27 @@
     transition: border-color 0.2s;
     background: white;
   }
-
   .project-card:hover { border-color: var(--accent); }
-
-  .project-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 0.6rem;
-  }
-
-  .project-title {
-    font-family: var(--serif);
-    font-size: 17px;
-    font-weight: 400;
-    color: var(--ink);
-    line-height: 1.35;
-  }
-
-  .project-badge {
-    flex-shrink: 0;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    padding: 3px 10px;
-    border-radius: 20px;
-    background: var(--accent-light);
-    color: var(--accent);
-  }
-
-  .project-desc {
-    font-size: 14px;
-    color: var(--ink-mid);
-    line-height: 1.65;
-    margin-bottom: 1rem;
-  }
-
-  .project-link {
-    font-size: 13px;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-  }
-
+  .project-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.6rem; }
+  .project-title { font-family: var(--serif); font-size: 17px; font-weight: 400; color: var(--ink); line-height: 1.35; }
+  .project-badge { flex-shrink: 0; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; padding: 3px 10px; border-radius: 20px; background: var(--accent-light); color: var(--accent); }
+  .project-desc { font-size: 14px; color: var(--ink-mid); line-height: 1.65; margin-bottom: 1rem; }
+  .project-link { font-size: 13px; color: var(--accent); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; }
   .project-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 
-  /* BLOG */
-  .blog-post {
-    padding: 1.75rem 0;
-    border-bottom: 0.5px solid var(--border);
-    cursor: pointer;
-  }
-
+  .blog-post { padding: 1.75rem 0; border-bottom: 0.5px solid var(--border); cursor: pointer; }
   .blog-post:first-child { border-top: 0.5px solid var(--border); }
-
-  .blog-meta {
-    font-size: 12px;
-    color: var(--ink-light);
-    letter-spacing: 0.03em;
-    margin-bottom: 6px;
-  }
-
-  .blog-title {
-    font-family: var(--serif);
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--ink);
-    margin-bottom: 6px;
-    line-height: 1.4;
-    transition: color 0.2s;
-  }
-
+  .blog-meta { font-size: 12px; color: var(--ink-light); letter-spacing: 0.03em; margin-bottom: 6px; }
+  .blog-title { font-family: var(--serif); font-size: 18px; font-weight: 400; color: var(--ink); margin-bottom: 6px; line-height: 1.4; transition: color 0.2s; }
   .blog-post:hover .blog-title { color: var(--accent); }
+  .blog-excerpt { font-size: 14px; color: var(--ink-mid); line-height: 1.65; }
 
-  .blog-excerpt {
-    font-size: 14px;
-    color: var(--ink-mid);
-    line-height: 1.65;
-  }
-
-  /* CONTACT */
-  .contact-intro {
-    font-size: 16px;
-    color: var(--ink-mid);
-    margin-bottom: 2.5rem;
-    line-height: 1.75;
-  }
-
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .contact-item {
-    background: white;
-    border: 0.5px solid var(--border);
-    border-radius: 10px;
-    padding: 1.25rem;
-  }
-
-  .contact-item-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-light);
-    margin-bottom: 6px;
-  }
-
-  .contact-item-value {
-    font-size: 15px;
-    color: var(--accent);
-    font-weight: 400;
-  }
-
-  .contact-item-value a {
-    color: inherit;
-    text-decoration: none;
-  }
-
+  .contact-intro { font-size: 16px; color: var(--ink-mid); margin-bottom: 2.5rem; line-height: 1.75; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
+  .contact-item { background: white; border: 0.5px solid var(--border); border-radius: 10px; padding: 1.25rem; }
+  .contact-item-label { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 6px; }
+  .contact-item-value { font-size: 15px; color: var(--accent); font-weight: 400; }
+  .contact-item-value a { color: inherit; text-decoration: none; }
   .contact-item-value a:hover { text-decoration: underline; text-underline-offset: 3px; }
 </style>
 </head>
@@ -380,15 +210,17 @@
   </ul>
 </nav>
 
-<!-- HOME -->
 <div class="page active" id="page-home">
   <div class="home-hero">
-    <h1 class="home-tagline">Researching how people <em>learn</em> language & literacy.</h1>
-    <p class="home-intro">Ph.D. candidate at UCI School of Education, specializing in Language & Literacy. Member of the Digital Learning Lab, exploring how technology — and now AI — can support learners of all ages.</p>
-    <div class="home-links">
-      <a class="btn btn-primary" onclick="showPage('about')">About me</a>
-      <a class="btn btn-outline" href="https://scholar.google.com/citations?user=EqfGd60AAAAJ" target="_blank">Google Scholar ↗</a>
-      <a class="btn btn-outline" href="https://orcid.org/0009-0004-1200-8939" target="_blank">ORCID ↗</a>
+    <img src="JulianLevine_HD-8.jpg" alt="Julian Levine" class="headshot">
+    <div class="content-block">
+        <h1 class="home-tagline">Researching how people <em>learn</em> language & literacy.</h1>
+        <p class="home-intro">Ph.D. candidate at UCI School of Education, specializing in Language & Literacy. Member of the Digital Learning Lab, exploring how technology and AI support learners of all ages.</p>
+        <div class="home-links">
+          <a class="btn btn-primary" onclick="showPage('about')">About me</a>
+          <a class="btn btn-outline" href="https://scholar.google.com/citations?user=EqfGd60AAAAJ" target="_blank">Google Scholar ↗</a>
+          <a class="btn btn-outline" href="https://orcid.org/0009-0004-1200-8939" target="_blank">ORCID ↗</a>
+        </div>
     </div>
   </div>
   <div class="home-stats">
@@ -401,136 +233,78 @@
       <div class="stat-value">Language & Literacy</div>
     </div>
     <div>
-      <div class="stat-label">Languages spoken</div>
-      <div class="stat-value">English, Japanese, Korean, Spanish</div>
+      <div class="stat-label">Location</div>
+      <div class="stat-value">Irvine, CA</div>
     </div>
   </div>
 </div>
 
-<!-- ABOUT -->
 <div class="page" id="page-about">
   <div class="section-wrap">
     <div class="section-label">Background</div>
     <h2 class="section-title">About me</h2>
     <div class="about-body">
-      <p>I am a Ph.D. candidate in the Teaching, Learning, and Educational Improvement (TLEI) cluster at the <a href="https://education.uci.edu/" target="_blank">UCI School of Education</a>, specializing in Language & Literacy. As a member of the <a href="https://www.digitallearninglab.org/" target="_blank">Digital Learning Lab</a>, I am currently conducting research on the <a href="http://www.conversetolearn.org" target="_blank">Converse to Learn</a> project. My ultimate goal is to use my research to help support learners' language and literacy development.</p>
-      <p>I hold a B.A. in economics with a minor in psychology from <a href="https://ucsd.edu/" target="_blank">UC San Diego</a> and an M.A. in education with a focus on social research methodologies from <a href="https://bse.berkeley.edu/" target="_blank">UC Berkeley</a>.</p>
-      <p>As an educator, I taught English in South Korea for two and a half years, tutored calculus at the UC Berkeley Athletic Study Center for a year and a half, and have served as a teaching assistant for undergraduate courses in education at UC Irvine.</p>
-      <p>In collaboration with my brother, I also <a href="https://www.englishlearningsongs.com" target="_blank">create songs and animated music videos for children learning English</a>.</p>
+      <p>I am a Ph.D. candidate in the Teaching, Learning, and Educational Improvement (TLEI) cluster at the <a href="https://education.uci.edu/" target="_blank">UCI School of Education</a>. As a member of the <a href="https://www.digitallearninglab.org/" target="_blank">Digital Learning Lab</a>, I conduct research on the <a href="http://www.conversetolearn.org" target="_blank">Converse to Learn</a> project, exploring language and literacy development through technology.</p>
+      <p>I hold a B.A. in economics from <a href="https://ucsd.edu/" target="_blank">UC San Diego</a> and an M.A. in education from <a href="https://bse.berkeley.edu/" target="_blank">UC Berkeley</a>, specializing in social research methodologies.</p>
+      <p>In collaboration with my brother, I create <a href="https://www.englishlearningsongs.com" target="_blank">animated music videos for children learning English</a>.</p>
     </div>
 
-    <div style="margin-top: 2.5rem;">
+    <div style="margin-top: 3rem;">
       <div class="section-label">Research interests</div>
-      <p style="font-size: 14px; color: var(--ink-mid);">Language and literacy development · Vocabulary · Educational technology · AI in education · Early childhood learning</p>
+      <p class="text-list">Language and literacy development · Vocabulary · Educational technology · AI in education · Early childhood learning</p>
     </div>
 
-    <div style="margin-top: 2.5rem;">
+    <div style="margin-top: 2rem;">
       <div class="section-label">Languages</div>
-      <div class="lang-grid">
-        <div class="lang-card">
-          <div class="lang-name">Japanese</div>
-          <div class="lang-level">JLPT N2</div>
-        </div>
-        <div class="lang-card">
-          <div class="lang-name">Korean</div>
-          <div class="lang-level">TOPIK 6</div>
-        </div>
-        <div class="lang-card">
-          <div class="lang-name">Spanish</div>
-          <div class="lang-level">Conversational</div>
-        </div>
-      </div>
+      <p class="text-list">English · Japanese (JLPT N2) · Korean (TOPIK 6) · Spanish (Conversational)</p>
     </div>
   </div>
 </div>
 
-<!-- PROJECTS -->
 <div class="page" id="page-projects">
   <div class="section-wrap">
     <div class="section-label">Work</div>
     <h2 class="section-title">Research & Projects</h2>
-
     <div class="project-card">
-      <div class="project-top">
-        <div class="project-title">Converse to Learn</div>
-        <span class="project-badge">Active</span>
+        <div class="project-top">
+          <div class="project-title">Converse to Learn</div>
+          <span class="project-badge">Active</span>
+        </div>
+        <p class="project-desc">Exploring how conversational AI can support language and literacy development. Part of the UCI Digital Learning Lab.</p>
+        <a class="project-link" href="http://www.conversetolearn.org" target="_blank">Visit project ↗</a>
       </div>
-      <p class="project-desc">A research project exploring how conversational AI can support language and literacy development in learners. Conducted as part of the Digital Learning Lab at UCI.</p>
-      <a class="project-link" href="http://www.conversetolearn.org" target="_blank">Visit project ↗</a>
-    </div>
-
-    <div class="project-card">
-      <div class="project-top">
-        <div class="project-title">English Learning Songs</div>
-        <span class="project-badge">Ongoing</span>
+      <div class="project-card">
+        <div class="project-top">
+          <div class="project-title">English Learning Songs</div>
+          <span class="project-badge">Ongoing</span>
+        </div>
+        <p class="project-desc">Animated music videos and songs designed to support children in learning English.</p>
+        <a class="project-link" href="https://www.englishlearningsongs.com" target="_blank">Visit site ↗</a>
       </div>
-      <p class="project-desc">Animated music videos and songs created with my brother, designed to support children in learning English in an engaging and accessible way.</p>
-      <a class="project-link" href="https://www.englishlearningsongs.com" target="_blank">Visit site ↗</a>
-    </div>
-
-    <div class="project-card">
-      <div class="project-top">
-        <div class="project-title">Google Scholar Publications</div>
-        <span class="project-badge">Academic</span>
-      </div>
-      <p class="project-desc">Peer-reviewed research and academic publications on language acquisition, educational technology, and literacy development.</p>
-      <a class="project-link" href="https://scholar.google.com/citations?user=EqfGd60AAAAJ&hl=en&oi=ao" target="_blank">View on Google Scholar ↗</a>
-    </div>
-
-    <p style="font-size: 13px; color: var(--ink-light); margin-top: 1.5rem; font-style: italic;">More projects coming soon — this section can be updated with your full publication list and CV.</p>
   </div>
 </div>
 
-<!-- BLOG -->
 <div class="page" id="page-blog">
-  <div class="section-wrap">
-    <div class="section-label">Writing</div>
-    <h2 class="section-title">Blog</h2>
-
-    <div class="blog-post">
-      <div class="blog-meta">Coming soon</div>
-      <div class="blog-title">This is where your first post will live</div>
-      <div class="blog-excerpt">Share thoughts on your research, language learning journeys, or reflections on education and technology. This section is ready for your writing.</div>
+    <div class="section-wrap">
+      <div class="section-label">Writing</div>
+      <h2 class="section-title">Blog</h2>
+      <div class="blog-post">
+        <div class="blog-meta">Coming soon</div>
+        <div class="blog-title">Language Learning Journey</div>
+        <div class="blog-excerpt">Reflections on academic and personal language acquisition.</div>
+      </div>
     </div>
-
-    <div class="blog-post">
-      <div class="blog-meta">Placeholder</div>
-      <div class="blog-title">Ideas for posts: your language learning story, research notes, field reflections</div>
-      <div class="blog-excerpt">Your blog is a chance to reach a broader audience beyond academia — students, teachers, language learners, and curious readers.</div>
-    </div>
-
-    <p style="font-size: 13px; color: var(--ink-light); margin-top: 1.5rem; font-style: italic;">Replace these placeholders with your real posts — just drop in a title, date, and excerpt for each.</p>
-  </div>
 </div>
 
-<!-- CONTACT -->
 <div class="page" id="page-contact">
-  <div class="section-wrap">
-    <div class="section-label">Get in touch</div>
-    <h2 class="section-title">Contact</h2>
-    <p class="contact-intro">I'm always happy to connect — whether you're a fellow researcher, a student, a language learner, or just someone interested in education and technology.</p>
-
-    <div class="contact-grid">
-      <div class="contact-item">
-        <div class="contact-item-label">Institution</div>
-        <div class="contact-item-value">UCI School of Education</div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-item-label">Research lab</div>
-        <div class="contact-item-value"><a href="https://www.digitallearninglab.org/" target="_blank">Digital Learning Lab ↗</a></div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-item-label">Google Scholar</div>
-        <div class="contact-item-value"><a href="https://scholar.google.com/citations?user=EqfGd60AAAAJ" target="_blank">View profile ↗</a></div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-item-label">ORCID</div>
-        <div class="contact-item-value"><a href="https://orcid.org/0009-0004-1200-8939" target="_blank">0009-0004-1200-8939 ↗</a></div>
+    <div class="section-wrap">
+      <div class="section-label">Get in touch</div>
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-item"><div class="contact-item-label">Institution</div><div class="contact-item-value">UCI School of Education</div></div>
+        <div class="contact-item"><div class="contact-item-label">Lab</div><div class="contact-item-value">Digital Learning Lab</div></div>
       </div>
     </div>
-
-    <p style="font-size: 13px; color: var(--ink-light); font-style: italic;">Add your email address here when you're ready to make this page complete.</p>
-  </div>
 </div>
 
 <script>
